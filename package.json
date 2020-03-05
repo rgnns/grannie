@@ -1,19 +1,25 @@
 {
   "name": "grannie",
+  "productName": "Grannie",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
-  },
   "scripts": {
     "start": "echo TODO",
     "build": "cross-env NODE_ENV=production webpack --config ./configs/webpack.config.main.prod.babel.js --colors",
     "test": "echo TODO",
     "eject": "echo TODO"
+  },
+  "build": {
+    "productName": "Grannie",
+    "appId": "com.jglievano.Grannie",
+    "files": [
+      "dist/",
+      "node_modules/",
+      "app.html",
+      "main.prod.js",
+      "main.prod.js.map",
+      "package.json"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,5 +50,12 @@
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   }
 }
