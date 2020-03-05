@@ -1,0 +1,18 @@
+{
+  "name": "grannie",
+  "productName": "Grannie",
+  "version": "1.0.0",
+  "main": "./main.prod.js",
+  "author": {
+    "name": "Gabriel Lievano",
+    "email": "jglievano@gmail.com",
+    "url": "https://jglievano.com"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",
+    "postinstall": "npm electron-rebuild"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {}
+}
+  
