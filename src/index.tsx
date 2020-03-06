@@ -1,12 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Fragment } from 'react';
+import { render } from 'react-dom';
+import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
+import Root from './containers/Root';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './app.global.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const AppContainer = process.env.PLAIN_HMR ? Fragment : ReactHotAppContainer;
+
+document.addEventListener('DOMContentLoaded', () =>
+  render(
+    <AppContainer>
+      <Root store={store} history={hsitory} />
+    </AppContainer>,
+    document.getElementById('root')
+  )
+);
