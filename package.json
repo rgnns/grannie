@@ -4,10 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "echo TODO",
     "build": "cross-env NODE_ENV=production webpack --config ./configs/webpack.config.main.prod.babel.js --colors",
-    "test": "echo TODO",
-    "eject": "echo TODO",
+    "start": "cross-env NODE_ENV=production electron ./src/main.prod.js",
     "start-renderer-dev": "cross-env NODE_ENV=development webpack-dev-server --config configs/webpack.config.renderer.dev.babel.js"
   },
   "build": {
