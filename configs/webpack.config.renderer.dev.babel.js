@@ -1,5 +1,8 @@
 import baseConfig from './webpack.config.base';
 import merge from 'webpack-merge';
+import path from 'path';
+import webpack from 'webpack';
+import { TypedCssModulesPlugin } from 'typed-css-modules-webpack-plugin';
 
 const port = process.env.PORT || 1212;
 const publicPath = `http://localhost:${port}/dist`;
@@ -13,7 +16,7 @@ export default merge.smart(baseConfig, {
   target: 'electron-renderer',
 
   entry: [
-    [],
+    ...([]),
     `webpack-dev-server/client?http://localhost:${port}/`,
     'webpack/hot/only-dev-server',
     require.resolve('../src/index.tsx')
@@ -53,7 +56,7 @@ export default merge.smart(baseConfig, {
                 localIdentName: '[name]__[local]__[hash:base64:5]'
               },
               sourceMap: true,
-              importHeaders: 1
+              importLoaders: 1
             }
           }
         ]
